@@ -16,17 +16,20 @@ function CreditCard(props) {
     flexDirection: 'column',
     backgroundColor: bgColor,
     color: color,
+    width: "340px",
+    padding: "10px",
+    borderRadius: "15px"
   };
 
   return (
     <div style={cardContainer}>
-      <div>
+      <div style={{alignSelf:"end", paddingRight:"10px"}}>
         <h3>{type}</h3>
       </div>
-      <div>
+      <div style={{textAlign: "center"}}>
         <p>{number}</p>
       </div>
-      <div style={{ display: 'flex' }}>
+      <div style={{ display: 'flex', gap: "20px" }}>
         <p>
           Expires {expirationMonth}/{expirationYear}
         </p>

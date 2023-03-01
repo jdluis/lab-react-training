@@ -3,6 +3,12 @@
   flex-direction: column;
   align-items: center;
   margin: 2rem;
+  gap: 25px;
+}
+
+.App > div {
+  border-bottom: 2px solid black;
+  padding-bottom: 15px;
 }
 
 .cardContainer {
