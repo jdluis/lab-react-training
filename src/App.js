@@ -57,7 +57,7 @@ function App() {
         <BoxColor r={128} g={255} b={0} />
       </div>
 
-      <div style={{ display: 'flex', gap: '15px' }}>
+      <div style={{ display: 'flex', gap: '15px', flexWrap: "wrap" }}>
         <CreditCard
           type="Visa"
           number="0123456789018845"

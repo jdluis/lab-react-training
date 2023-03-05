@@ -1,20 +1,29 @@
-
+import { useEffect, useState } from 'react';
+/* ☆
+★ */
 function Rating(props) {
-    console.log(props.children)
-  return (
-    <>
-    {props.children.map(each => {
-        return (
-            <div>
-            {each === 0 ? '★' : 0}
+  const { children } = props;
+  const [stars, setStars] = useState([]);
 
-            </div>
-        )
-    })}
-        ☆
-        ★
-    </>
-  )
+
+
+  useEffect(() => {
+    countStar();
+  }, []);
+
+  console.log(stars, children);
+
+  const countStar = () => {
+    const num = Math.round(Math.min(Math.max(Number(children), 0), 5));
+    const fullStars = '★'.repeat(num);
+    const emptyStars = '☆'.repeat(5 - num);
+    setStars(fullStars + emptyStars);
+  };
+  return (
+    <div>
+      {stars}
+    </div>
+  );
 }
 
-export default Rating
+export default Rating;
