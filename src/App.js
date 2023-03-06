@@ -7,6 +7,7 @@ import Random from './components/Random';
 import Rating from './components/Rating';
 import DriverCard from './components/DriverCard';
 import LikeButton from './components/LikeButton';
+import ClickablePicture from './components/ClickablePicture';
 
 function App() {
   return (
@@ -103,7 +104,7 @@ function App() {
         <Rating>5</Rating>
       </div>
 
-      <div style={{display:"flex", flexDirection:"column", gap:"20px"}}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
         <DriverCard
           name="Travis Kalanick"
           rating={4.2}
@@ -126,7 +127,11 @@ function App() {
       </div>
 
       <div>
-      <LikeButton />
+        <LikeButton />
+      </div>
+
+      <div>
+        <ClickablePicture img="maxence.png" imgClicked="maxence-glasses.png" />
       </div>
     </div>
   );
