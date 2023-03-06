@@ -6,6 +6,7 @@ import IdCard from './components/IdCard';
 import Random from './components/Random';
 import Rating from './components/Rating';
 import DriverCard from './components/DriverCard';
+import LikeButton from './components/LikeButton';
 
 function App() {
   return (
@@ -122,6 +123,10 @@ function App() {
             licensePlate: 'BE33ER',
           }}
         />
+      </div>
+
+      <div>
+      <LikeButton />
       </div>
     </div>
   );
